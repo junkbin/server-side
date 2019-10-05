@@ -12,18 +12,20 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
+const list = [];
+
+
 /** GET RETURNS ALL PRODUCT */
 app.get("/", function(req, res) {
-    let output = [
-        {productId: 1, productName : 'VIVO',  categoryName: 'Mobile', categoryId: 'V100'}
-    ];
-    res.json(output);
+    
+    res.json(list);
 });
 
 
 /** POST SAVE PRODUCT INTO DB */
 app.post("/", function(req, res){
     let inputRequest = req.body;
+    list.push(inputRequest);
     
     res.json(inputRequest);
 });
