@@ -9,7 +9,9 @@ app.use(cors());
 
 /** GET RETURNS ALL PRODUCT */
 app.get("/", function(req, res) {
-    let output = [{productId: 1, productName : 'VIVO',  categoryName: 'Mobile', categoryId: 'V100'}];
+    let output = [
+        {productId: 1, productName : 'VIVO',  categoryName: 'Mobile', categoryId: 'V100'}
+    ];
     res.json(output);
 });
 
